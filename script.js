@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const elements = document.querySelectorAll('[data-pf-type="ProductATC"]');
 
   // Define the redirect URL
-  const redirectUrl = "https://theayurvedaexperience.co.uk/checkouts/cn/Z2NwLWV1cm9wZS13ZXN0MzowMUpIMFBRUDdYM1I4MDNaNThSV1A5MTdZMQ/stock-problems?auto_redirect=false&edge_redirect=true&locale=en-GB&skip_shop_pay=true";
+  const redirectUrl = "https://theayurvedaexperience.co.uk/cart";
 
   elements.forEach((el) => {
       const rect = el.getBoundingClientRect(); // Get element's dimensions and position
