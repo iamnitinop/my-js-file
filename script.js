@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let atcButtons = document.querySelectorAll("[ProductATC]"); // Select all elements with the ProductATC attribute
+  let atcButtons = document.querySelectorAll(".custom-button"); // Select all elements with the custom-button class
 
   atcButtons.forEach(function(atcButton) {
     let overlay = document.createElement("a");
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     overlay.style.height = rect.height + "px";
     overlay.style.top = rect.top + window.scrollY + "px";
     overlay.style.left = rect.left + window.scrollX + "px";
-    overlay.style.background = "rgba(0, 0, 0, 0.3)"; // Semi-transparent black background
+    overlay.style.background = "rgba(0, 0, 0, 0)"; // Semi-transparent black background
     overlay.style.cursor = "pointer";
     overlay.style.zIndex = "10";
 
