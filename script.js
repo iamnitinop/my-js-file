@@ -1,23 +1,26 @@
-document.addEventListener("DOMContentLoaded", function () {
-  let atcButtons = document.querySelectorAll(".custom-button"); // Select all elements with the custom-button class
+document.addEventListener("DOMContentLoaded", function() {
+  // Select all elements with the data-pf-type="ProductATC" attribute
+  const elements = document.querySelectorAll('[data-pf-type="ProductATC"]');
 
-  atcButtons.forEach(function(atcButton) {
-    let overlay = document.createElement("a");
+  // Define the redirect URL
+  const redirectUrl = "https://theayurvedaexperience.co.uk/checkouts/cn/Z2NwLWV1cm9wZS13ZXN0MzowMUpIMFBRUDdYM1I4MDNaNThSV1A5MTdZMQ/stock-problems?auto_redirect=false&edge_redirect=true&locale=en-GB&skip_shop_pay=true";
 
-    // Match button size and position
-    let rect = atcButton.getBoundingClientRect();
-    overlay.style.position = "absolute";
-    overlay.style.width = rect.width + "px";
-    overlay.style.height = rect.height + "px";
-    overlay.style.top = rect.top + window.scrollY + "px";
-    overlay.style.left = rect.left + window.scrollX + "px";
-    overlay.style.background = "rgba(0, 0, 0, 0.4)"; // Semi-transparent black background
-    overlay.style.cursor = "pointer";
-    overlay.style.zIndex = "10";
+  elements.forEach((el) => {
+      const rect = el.getBoundingClientRect(); // Get element's dimensions and position
 
-    overlay.href = "https://www.amazon.in/gp/cart/view.html?ref_=nav_cart"; // Amazon cart link
-    overlay.target = "_self"; // Open in the same tab
+      // Create the overlay element
+      const overlay = document.createElement('a');
+      overlay.href = redirectUrl; // Set the redirect URL for the overlay
+      overlay.style.position = 'absolute';
+      overlay.style.top = `${rect.top + window.scrollY}px`;
+      overlay.style.left = `${rect.left + window.scrollX}px`;
+      overlay.style.width = `${rect.width}px`;
+      overlay.style.height = `${rect.height}px`;
+      overlay.style.zIndex = '1000'; // Ensure it's on top of the element
+      overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'; // Semi-transparent background
+      overlay.style.border = '2px solid #fff'; // Optional: Border for visibility
 
-    document.body.appendChild(overlay);
+      // Append the overlay to the body
+      document.body.appendChild(overlay);
   });
 });
