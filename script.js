@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const elements = document.querySelectorAll('[data-pf-type="ProductATC"]');
 
   // Define the redirect URL
-  const redirectUrl = "https://www.samsung.com/in/";
+  const redirectUrl = "https://www.google.co.in/";
 
   elements.forEach((el) => {
       const rect = el.getBoundingClientRect(); // Get element's dimensions and position
