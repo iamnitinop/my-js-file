@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     overlay.style.width = '100%';
     overlay.style.height = '100%';
     overlay.style.zIndex = '1000';
-    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.2)'; // Fully transparent
+    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.7)'; // Fully transparent
 
     // Append the overlay inside the parent
     button.style.position = 'relative'; // Ensure button stays in place
